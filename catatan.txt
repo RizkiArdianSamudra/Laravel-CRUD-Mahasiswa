@@ -1,0 +1,63 @@
+php artisan make:model tbl_mahasiswa => samakan dengan nama tabel di database
+php artisan make:controller MahasiswaController => untuk membuat controller mahasiswa
+
+
+{{-- <a href="/create">Tambah</a>
+<table border="1">
+    <tr>
+        <th>NRP</th>
+        <th>Nama</th>
+        <th>Email</th>
+        <th>Alamat</th>
+        <th>Aksi</th>
+    </tr>
+    @foreach($mahasiswa as $mhs)
+    <tr>
+        <td> {{$mhs->nrp}} </td>
+        <td> {{$mhs->nama}} </td>
+        <td> {{$mhs->email}} </td>
+        <td> {{$mhs->alamat}} </td>
+        <td>
+            <a href="/{{ $mhs->nrp }}/edit">Edit</a>
+            <form action="/{{ $mhs->nrp }}" method="POST">
+                @csrf
+                @method('delete')
+                <input type="submit" value="Delete">
+            </form>
+        </td>
+    </tr>
+    @endforeach
+</table> --}}
+
+
+{{-- <h1>Edit Data</h1>
+<form action="/{{ $mahasiswa->nrp }}" method="POST"> 
+    @method('PUT') 
+    @csrf  
+
+    <label>nrp</label>
+    <input type="text" name="nrp" value="{{ $mahasiswa->nrp }}"><br><br>
+    <label>nama</label>
+    <input type="text" name="nama" value="{{ $mahasiswa->nama }}"><br><br>
+    <label>email</label>
+    <input type="email" name="email" value="{{ $mahasiswa->email }}"><br><br>
+    <label>alamat</label>
+    <input type="text" name="alamat" value="{{ $mahasiswa->alamat }}"><br><br>
+    <button type="submit" name="submit" value="submit">Kirim</button>
+</form> --}}
+
+
+{{-- <h1>create</h1>
+<form action="/action" method="POST">
+    @csrf 
+    <label>nrp</label>
+    <input type="text" name="nrp"><br><br>
+    <label>nama</label>
+    <input type="text" name="nama"><br><br>
+    <label>email</label>
+    <input type="email" name="email"><br><br>
+    <label>alamat</label>
+    <input type="text" name="alamat"><br><br>
+    <br><br>
+    <button type="submit" name="submit" value="submit">Kirim</button>
+</form> --}}
